@@ -1,6 +1,6 @@
-package api;
+package com.api;
 
-import services.ServerService;
+import com.services.ServerService;
 import spark.Route;
 
 public class ServerController {

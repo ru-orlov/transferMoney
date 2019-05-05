@@ -1,14 +1,14 @@
-package services;
+package com.services;
 
-import db.SQLiteJDBC;
-import model.Account;
+import com.db.SQLiteJDBC;
+import com.model.Account;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import static model.Account.ID;
-import static model.Account.ACCOUNT_NUMBER;
-import static model.Account.ACCOUNT_BALANCE;
+import static com.model.Account.ID;
+import static com.model.Account.ACCOUNT_NUMBER;
+import static com.model.Account.ACCOUNT_BALANCE;
 
 
 public class AccountService {
@@ -22,14 +22,6 @@ public class AccountService {
 
     public AccountService(SQLiteJDBC sqLiteJDBC) {
         this.sqLiteJDBC = sqLiteJDBC;
-    }
-
-    public Account templateAccount(){
-        Account templateAcount = new Account();
-        templateAcount.id = 1L;
-        templateAcount.number = 123;
-        templateAcount.balance = 100;
-        return templateAcount;
     }
 
     public List<Account> getAllAccounts(){

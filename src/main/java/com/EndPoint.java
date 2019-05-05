@@ -1,11 +1,13 @@
-import api.AccountController;
-import api.ServerController;
-import api.TransferController;
-import db.SQLiteJDBC;
-import services.AccountService;
-import services.ServerService;
-import services.TransferService;
-import transformers.JsonTransformer;
+package com;
+
+import com.api.AccountController;
+import com.api.ServerController;
+import com.api.TransferController;
+import com.db.SQLiteJDBC;
+import com.services.AccountService;
+import com.services.ServerService;
+import com.services.TransferService;
+import com.transformers.JsonTransformer;
 
 import static spark.Spark.*;
 
@@ -35,7 +37,6 @@ public class EndPoint {
     }
 
     private void injectAccountController(){
-        get("/templateAccount", accountController.templateAccount(), jsonTransformer);
         get("/allAcounts", accountController.getAllAccounts(), jsonTransformer);
         get("/account/id/:id", accountController.getAccountById(), jsonTransformer);
         get("/account/number/:number", accountController.getAccountByNumber(), jsonTransformer);

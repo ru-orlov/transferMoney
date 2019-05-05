@@ -1,6 +1,6 @@
-package api;
+package com.api;
 
-import services.AccountService;
+import com.services.AccountService;
 import spark.Route;
 
 
@@ -10,10 +10,6 @@ public class AccountController {
 
     public AccountController(AccountService accountService){
         this.accountService = accountService;
-    }
-
-    public Route templateAccount(){
-        return (request, response) -> accountService.templateAccount();
     }
 
     public Route getAllAccounts() {

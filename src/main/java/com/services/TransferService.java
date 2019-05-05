@@ -1,19 +1,19 @@
-package services;
+package com.services;
 
-import db.SQLiteJDBC;
-import model.Account;
-import model.Transfer;
-import model.TransferStatement;
+import com.db.SQLiteJDBC;
+import com.model.Account;
+import com.model.Transfer;
+import com.model.TransferStatement;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static model.Transfer.ID;
-import static model.Transfer.TRANSFER_FROM;
-import static model.Transfer.TRANSFER_TO;
-import static model.Transfer.TRANSFER_AMOUNT;
-import static model.Transfer.TRANSFER_DATE;
+import static com.model.Transfer.ID;
+import static com.model.Transfer.TRANSFER_FROM;
+import static com.model.Transfer.TRANSFER_TO;
+import static com.model.Transfer.TRANSFER_AMOUNT;
+import static com.model.Transfer.TRANSFER_DATE;
 
 public class TransferService {
 
