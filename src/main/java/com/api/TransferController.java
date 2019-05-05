@@ -1,9 +1,9 @@
-package api;
+package com.api;
 
 import com.google.gson.Gson;
-import model.Transfer;
-import model.TransferStatement;
-import services.TransferService;
+import com.model.Transfer;
+import com.model.TransferStatement;
+import com.services.TransferService;
 import spark.Route;
 
 public class TransferController {
