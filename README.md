@@ -1,6 +1,6 @@
 # transferMoney
 
-##How to build.
+## How to build.
     mvn clean package
 
 ## How to Run
