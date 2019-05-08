@@ -9,7 +9,8 @@ import com.services.ServerService;
 import com.services.TransferService;
 import com.transformers.JsonTransformer;
 
-import static spark.Spark.*;
+import static spark.Spark.get;
+import static spark.Spark.post;
 
 public class EndPoint {
 
@@ -19,14 +20,14 @@ public class EndPoint {
     private AccountController accountController;
     private TransferController transferController;
 
-    private EndPoint(SQLiteJDBC sqLiteJDBC){
+    public EndPoint(SQLiteJDBC sqLiteJDBC){
         serverController = new ServerController(new ServerService());
         accountController = new AccountController(new AccountService(sqLiteJDBC));
         transferController = new TransferController(new TransferService(sqLiteJDBC, new AccountService(sqLiteJDBC)));
         sqLiteJDBC.memoryRestore();
     }
 
-    private void serverAPI() {
+    public void serverAPI() {
         injectServerController();
         injectAccountController();
         injectTransferController();
