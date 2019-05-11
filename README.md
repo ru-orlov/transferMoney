@@ -15,6 +15,6 @@
     GET /transfers/id/:bytransferId
     GET /transfers/sender/:bysender
     POST /transfer/dotransfer 
-    ({"fromAccId":snederId,"toAccId":receiveId,"amount":intamount})
+    ({"fromAccId":senderId,"toAccId":receiveId,"amount":intamount})
     
     
